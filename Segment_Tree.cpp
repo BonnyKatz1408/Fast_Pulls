@@ -52,7 +52,7 @@ void update(int node, int l, int r, int idx, int val) {
     if(idx <= mid) {
         update(2*node,l,mid,idx,val);
     } else {
-        update(2*node,mid+1,r,idx,val);
+        update(2*node+1,mid+1,r,idx,val);
     }
 
     //fix the tree on your way back
@@ -71,11 +71,11 @@ int main() {
     arr.resize(n);
     while(auto &a:arr) cin>>a;
 
-    segement_tree.resize(4*n);
+    segment_tree.resize(4*n);
     //recursively build the tree
     build(1,0,n-1);
 
-    
+
 
     return 0;
 }
