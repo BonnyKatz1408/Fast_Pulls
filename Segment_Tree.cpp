@@ -23,7 +23,7 @@ void build(int node, int l, int r) {
 //resolving queries
 // start at root, 0, n-1 basically look through the whole tree, starting at the root,
 // now what is ql , qr ?, ql qr is the actual range that we are trying to calculate in
-int query(int node, int l, int r, int ql, int qr) {
+int query(int node, int l, int r, int ql, int qr) {s
     if(r < ql || l > qr) return INT_MAX;  //outside current range; 
     //but how did we get in a range outside? //2*nodes
     //completely inside
